@@ -67,7 +67,7 @@ const Carousel = () => {
           Foundation
         </h1>
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-orange-500 mb-4 md:mb-8">
-          Patna
+          Patna <span className='text-[#1e3a8a] '>.</span>
         </h2>
         <p className="text-sm sm:text-base md:text-lg max-w-[300px] sm:max-w-[400px] md:max-w-xl mx-auto md:mx-0">
           Maa Prema Foundation was born on December 5, 2017 out of 

@@ -13,8 +13,8 @@ const AboutSection = () => {
       };
 
     return (
-      <section className="py-16 px-10 md:px-4 max-w-7xl mx-auto flex flex-col md:flex-row">
-        <div className='w-3/4 flex flex-col justify-center '>   
+      <section className="py-16 px-10 md:px-4 max-w-7xl mx-auto flex flex-col md:flex-row space-y-10 md:space-y-0">
+        <div className='w-full md:w-3/4 flex flex-col justify-center '>   
         {/* Header */}
         <div className="mb-12">
           <p className="text-orange-500  text-sm font-medium mb-2">MAA PREMA FOUNDATION</p>
@@ -34,7 +34,7 @@ const AboutSection = () => {
           </p>
   
           {/* Download Button */}
-          <div className="pt-8 text-center">
+          <div className="pt-8 text-center flex justify-center">
             <button onClick={handleDownload} className="bg-orange-500 hover:bg-orange-600 text-white font-medium py-3 px-8 rounded-lg transition-colors duration-300">
               Download Brochure
             </button>

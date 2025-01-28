@@ -47,7 +47,7 @@ const WhatWeDo = () => {
     ];
 
     return (
-        <section className="py-16 px-4">
+        <section className="py-16 px-10 md:px-4">
             <div className="max-w-7xl mx-auto">
                 {/* What We Do Section */}
                 <div className="mb-20">
@@ -55,14 +55,14 @@ const WhatWeDo = () => {
                     <h2 className="text-5xl font-bold text-[#1e3a8a] mb-8">
                         What we do<span className="text-orange-500">.</span>
                     </h2>
-                    <p className="text-lg text-gray-600 max-w-4xl">
-                        Maa Prema Foundation is a giving platform that allows you to support a cause of your choice from the NGOs that have been evaluated for transparency and credibility. We tell you exactly where your money went and also give you proof of it through donation reports. We have reviewed hundreds of non - profit organizations from all over India to identify and list the ones that meet our Give assured criteria. We work for a host of causes ranging from child welfare and education, blood donation, and women's empowerment and many others.
+                    <p className="text-lg text-gray-600  w-full">
+                        Maa Prema Foundation is a giving platform that allows you to support a cause of your choice from the NGOs that have been evaluated for transparency and credibility. We tell you exactly where your money went and also give you proof of it through donation reports. We have reviewed hundreds of non - profit organizations from all over India to identify and list the ones that meet our Give assured criteria. We work for a host of causes ranging from child welfare and education, blood donation, and women&apos;s empowerment and many others.
                     </p>
                 </div>
 
                 {/* Our Programs Section */}
                 <div className="mb-12">
-                    <h2 className="text-4xl font-bold text-center mb-16">OUR PROGRAMMES</h2>
+                    <h2 className="text-4xl font-bold text-center text-[#1e3a8a]  mb-16">OUR PROGRAMMES<span className="text-orange-500 text-5xl">{""}.</span></h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {programs.map((program, index) => (
                             <div 

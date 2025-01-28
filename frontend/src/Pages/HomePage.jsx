@@ -3,14 +3,16 @@ import AboutSection from "../Components/About";
 import Impact from '../Components/Impact';
 import Stories from '../Components/Stories';
 import WhatWeDo from '../Components/WhatWeDo';
+import Values from '../Components/Values';
 
 const HomePage = () => {
   return (
     <div>
          <Carousel />
          <AboutSection />
-         <WhatWeDo />
          <Impact />
+         <WhatWeDo />
+        <Values/>           
          <Stories />
     </div>
   )

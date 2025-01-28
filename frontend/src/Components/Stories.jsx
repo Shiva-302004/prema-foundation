@@ -42,7 +42,7 @@ const Stories = () => {
     const scroll = (direction) => {
         const { current } = scrollRef;
         if (current) {
-            const scrollAmount = direction === 'left' ? -400 : 400;
+            const scrollAmount = direction === 'left' ? -300 : 300;
             current.scrollBy({
                 left: scrollAmount,
                 behavior: 'smooth'
@@ -51,7 +51,7 @@ const Stories = () => {
     };
 
     return (
-        <section className="py-16 px-4">
+        <section className="py-16 px-10 md:px-4">
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <div className="mb-12">
