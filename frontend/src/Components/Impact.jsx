@@ -5,6 +5,7 @@ const Impact = () => {
     const [programs, setPrograms] = useState(0);
     const [donations, setDonations] = useState(0);
     const [people, setPeople] = useState(0);
+    const [hasAnimated, setHasAnimated] = useState(false);
     const sectionRef = useRef(null);
 
     const animateValue = (start, end, duration, setValue) => {
@@ -24,7 +25,8 @@ const Impact = () => {
         const observer = new IntersectionObserver(
             (entries) => {
                 const [entry] = entries;
-                if (entry.isIntersecting) {
+                if (entry.isIntersecting && !hasAnimated) {
+                    setHasAnimated(true);
                     animateValue(0, 3120, 2000, setCharitable);
                     animateValue(0, 1195, 2000, setPrograms);
                     animateValue(0, 23150, 2000, setDonations);
@@ -43,12 +45,12 @@ const Impact = () => {
                 observer.unobserve(sectionRef.current);
             }
         };
-    }, []);
+    }, [hasAnimated]);
 
     return (
         <section ref={sectionRef} className="py-16 px-4 bg-gray-300">
             <div className="max-w-7xl mx-auto">
-                <div className="text-center mb-12">
+                <div className="text-center mb-12" data-aos="fade-up">
                     <p className="text-orange-500 font-medium mb-2">MAA PREMA FOUNDATION</p>
                     <h2 className="text-4xl font-bold text-[#1e3a8a]">
                         Impact<span className="text-orange-500">.</span>
@@ -56,19 +58,19 @@ const Impact = () => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-                    <div className="p-6">
+                    <div className="p-6 bg-white rounded-lg shadow-lg" data-aos="zoom-in" data-aos-delay="100">
                         <h3 className="text-5xl font-bold text-orange-500 mb-4">{charitable}+</h3>
                         <p className="text-[#1e3a8a] font-medium">Charitable</p>
                     </div>
-                    <div className="p-6">
+                    <div className="p-6 bg-white rounded-lg shadow-lg" data-aos="zoom-in" data-aos-delay="200">
                         <h3 className="text-5xl font-bold text-orange-500 mb-4">{programs}+</h3>
                         <p className="text-[#1e3a8a] font-medium">Programs</p>
                     </div>
-                    <div className="p-6">
+                    <div className="p-6 bg-white rounded-lg shadow-lg" data-aos="zoom-in" data-aos-delay="300">
                         <h3 className="text-5xl font-bold text-orange-500 mb-4">{donations}+</h3>
                         <p className="text-[#1e3a8a] font-medium">Collected Donations</p>
                     </div>
-                    <div className="p-6">
+                    <div className="p-6 bg-white rounded-lg shadow-lg" data-aos="zoom-in" data-aos-delay="400">
                         <h3 className="text-5xl font-bold text-orange-500 mb-4">{people}+</h3>
                         <p className="text-[#1e3a8a] font-medium">People Served</p>
                     </div>
@@ -78,4 +80,4 @@ const Impact = () => {
     );
 };
 
-export default Impact; 
+export default Impact;

@@ -7,13 +7,31 @@ const Navbar = () => {
     localStorage.getItem("theme") === "dark"
   );
 
+  const handleScroll = (e, targetId) => {
+    e.preventDefault();
+    const element = document.getElementById(targetId);
+    if (element) {
+      const offset = 80; // Adjust this value based on your navbar height
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+    setIsMenuOpen(false); // Close mobile menu after clicking
+  };
+
   useEffect(() => {
     if (isDark) {
       document.documentElement.classList.add("dark");
       localStorage.setItem("theme", "dark");
+      // console.log("dark");
     } else {
       document.documentElement.classList.remove("dark");
       localStorage.setItem("theme", "light");
+      // console.log("light");
     }
   }, [isDark]);
 
@@ -26,35 +44,55 @@ const Navbar = () => {
             to="/"
             className="flex items-center text-orange-500 text-xl font-bold"
           >
-            MPF 🏠
+            MPF <span className="text-orange-500 px-1"> {" "}<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24">
+                    <path d="M12.74 2.32a1 1 0 0 0-1.48 0l-9 10A1 1 0 0 0 3 14h2v7a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-7h2a1 1 0 0 0 1-1 1 1 0 0 0-.26-.68z" fill="#FF6900"></path>
+                </svg></span>
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8 ">
+          <div className="hidden md:flex items-center space-x-12 ">
             <Link
               to="/"
+
               className="text-gray-600 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-500"
             >
               Home
             </Link>
-            <Link
-              to="/about"
+            <a
+              href="#about"
+              onClick={(e) => handleScroll(e, 'about')}
               className="text-gray-600 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-500"
             >
               About
-            </Link>
-            <Link
-              to="/value"
+            </a>
+            <a
+              href="#impact"
+              onClick={(e) => handleScroll(e, 'impact')}
               className="text-gray-600 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-500"
             >
-              Value
-            </Link>
-            <Link
-              to="/contact"
+              Impact
+            </a>
+            <a
+              href="#whatwedo"
+              onClick={(e) => handleScroll(e, 'whatwedo')}
+              className="text-gray-600 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-500"
+            >
+              What We Do
+            </a>
+            <a
+              href="#values"
+              onClick={(e) => handleScroll(e, 'values')}
+              className="text-gray-600 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-500"
+            >
+              Values
+            </a>
+            <a
+              href="#contact"
+              onClick={(e) => handleScroll(e, 'contact')}
               className="text-gray-600 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-500"
             >
               Contact
-            </Link>
+            </a>
           </div>
 
           {/* Right Side Items */}
@@ -66,11 +104,13 @@ const Navbar = () => {
             >
               {isDark ? "☀️" : "🌙"}
             </button>
-
+            <a href="#donation"
+            onClick={(e) => handleScroll(e, 'donation')}>
             {/* Donate Button */}
             <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
               Donate
             </button>
+          </a>
 
             {/* Mobile Menu Button */}
             <button
@@ -102,28 +142,46 @@ const Navbar = () => {
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white dark:bg-gray-900">
               <Link
                 to="/"
+                onClick={(e) => handleScroll(e, 'home')}
                 className="block px-3 py-2 rounded-md text-gray-600 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-500"
               >
                 Home
               </Link>
-              <Link
-                to="/about"
+              <a
+                href="#about"
+                onClick={(e) => handleScroll(e, 'about')}
                 className="block px-3 py-2 rounded-md text-gray-600 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-500"
               >
                 About
-              </Link>
-              <Link
-                to="/value"
+              </a>
+              <a
+                href="#impact"
+                onClick={(e) => handleScroll(e, 'impact')}
                 className="block px-3 py-2 rounded-md text-gray-600 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-500"
               >
-                Value
-              </Link>
-              <Link
-                to="/contact"
+                Impact
+              </a>
+              <a
+                href="#whatwedo"
+                onClick={(e) => handleScroll(e, 'whatwedo')}
+                className="block px-3 py-2 rounded-md text-gray-600 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-500"
+              >
+                What We Do
+              </a>
+              <a
+                href="#values"
+                onClick={(e) => handleScroll(e, 'values')}
+                className="block px-3 py-2 rounded-md text-gray-600 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-500"
+              >
+                Values
+              </a>
+              <a
+                href="#contact"
+                onClick={(e) => handleScroll(e, 'contact')}
                 className="block px-3 py-2 rounded-md text-gray-600 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-500"
               >
                 Contact
-              </Link>
+              </a>
             </div>
           </div>
         )}

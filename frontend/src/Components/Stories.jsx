@@ -42,7 +42,7 @@ const Stories = () => {
     const scroll = (direction) => {
         const { current } = scrollRef;
         if (current) {
-            const scrollAmount = direction === 'left' ? -400 : 400;
+            const scrollAmount = direction === 'left' ? -300 : 300;
             current.scrollBy({
                 left: scrollAmount,
                 behavior: 'smooth'
@@ -51,10 +51,10 @@ const Stories = () => {
     };
 
     return (
-        <section className="py-16 px-4">
+        <section className="py-16 px-10 md:px-4">
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
-                <div className="mb-12">
+                <div className="mb-12" data-aos="fade-up">
                     <p className="text-orange-500 font-medium mb-2">MAA PREMA FOUNDATION</p>
                     <h2 className="text-5xl font-bold text-[#1e3a8a]">
                         Popular Stories & News<span className="text-orange-500">.</span>
@@ -62,7 +62,7 @@ const Stories = () => {
                 </div>
 
                 {/* Stories Container */}
-                <div className="relative bg-gray-200 rounded-3xl">
+                <div className="relative bg-gray-200 rounded-3xl" data-aos="fade-up" data-aos-delay="200">
                     {/* Scroll Buttons */}
                     <button 
                         onClick={() => scroll('left')}
@@ -87,10 +87,12 @@ const Stories = () => {
                         className="flex overflow-x-auto gap-6 p-5 scroll-smooth hide-scrollbar "
                         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                     >
-                        {stories.map((story) => (
+                        {stories.map((story, index) => (
                             <div 
                                 key={story.id}
-                                className="flex-none w-[300px] md:w-[300px] bg-white rounded-lg overflow-hidden shadow-lg  p-2"
+                                className="flex-none w-[300px] bg-white rounded-lg shadow-lg overflow-hidden"
+                                data-aos="fade-up"
+                                data-aos-delay={300 + (index * 100)}
                             >
                                 <img 
                                     src={story.image} 
