@@ -1,5 +1,12 @@
 import { useRef } from 'react';
 import impactImage from '../assets/images/contact.jpeg';
+import news1 from "../assets/news/news1.jpg"
+import news2 from "../assets/news/news2.jpg"
+import news3 from "../assets/news/news3.jpg"
+import news4 from "../assets/news/news4.jpg"
+import news5 from "../assets/news/news5.jpg"
+import news6 from "../assets/news/news6.jpg"
+import news7 from "../assets/news/news7.jpg"
 
 
 const Stories = () => {
@@ -9,32 +16,50 @@ const Stories = () => {
         {
             id: 1,
             image: impactImage,
-            title: "Self Defence Training Camp for Girls",
-            date: "Bihar Mahila Ayog, 24-07-2018",
+            title: "Har Ghar Tiranga Campaign",
+            
         },
         {
             id: 2,
-            image: impactImage,
+            image: news1,
             title: "Self Defence Training Camp for Girls",
-            date: "Bihar Mahila Ayog, 24-07-2018",
+          
         },
         {
             id: 3,
-            image: impactImage,
-            title: "Self Defence Training Camp for Girls",
-            date: "Bihar Mahila Ayog, 24-07-2018",
+            image: news2,
+            title: "Self Defence for Eve Teasing",
+          
         },
         {
             id: 4,
-            image: impactImage,
-            title: "Self Defence Training Camp for Girls",
-            date: "Bihar Mahila Ayog, 24-07-2018",
+            image: news3,
+            title: "Closing Ceremony of Self Defence Camp",
+            
         },
         {
             id: 5,
-            image: impactImage,
+            image: news4,
+            title: "Mithila Painting Workshop",
+          
+        },
+        {
+            id: 6,
+            image: news5,
+            title: "Handmade Craft & Mithila Painting Workshop",
+          
+        },
+        {
+            id: 7,
+            image: news6,
             title: "Self Defence Training Camp for Girls",
-            date: "Bihar Mahila Ayog, 24-07-2018",
+          
+        },
+        {
+            id: 8,
+            image: news7,
+            title: "Self Defence Training Camp for Girls",
+          
         },
         // Add more stories as needed
     ];
@@ -97,7 +122,7 @@ const Stories = () => {
                                 <img 
                                     src={story.image} 
                                     alt={story.title}
-                                    className="w-full h-[250px] object-cover rounded-xl"
+                                    className="w-full h-[250px]  rounded-xl"
                                 />
                                 <div className="p-6 ">
                                     <h3 className="text-base font-bold text-[#1e3a8a] mb-2">
