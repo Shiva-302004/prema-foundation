@@ -191,7 +191,7 @@ const Events = () => {
                         <span className="font-semibold">Date: </span>
                         {event.date}
                       </div>
-                      <div className="text-right">
+                      <div className="text-right ">
                         <span className="font-semibold">Venue: </span>
                         {event.venue}
                       </div>
