@@ -7,9 +7,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and Address Section */}
           <div className="space-y-4">
-            <Link to="/" className="flex items-center text-orange-500 text-xl font-bold">
-              MPF 🏠
-            </Link>
+          <Link
+            to="/"
+            className="flex items-center text-orange-500 text-xl font-bold"
+          >
+            MPF <span className="text-orange-500 px-1"> {" "}<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24">
+                    <path d="M12.74 2.32a1 1 0 0 0-1.48 0l-9 10A1 1 0 0 0 3 14h2v7a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-7h2a1 1 0 0 0 1-1 1 1 0 0 0-.26-.68z" fill="#FF6900"></path>
+                </svg></span>
+          </Link>
             <div className="text-gray-600 dark:text-gray-400 text-sm">
               <p>G-2, Deepleela Complex,</p>
               <p>Vindhyavasini Street, Kadamkuan,</p>
@@ -28,16 +33,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Company Section */}
-          <div>
-            <h3 className="text-gray-800 dark:text-white font-semibold mb-4">Company</h3>
-            <ul className="space-y-3">
-              <li><Link to="/how-we-work" className="text-gray-600 dark:text-gray-400 hover:text-orange-500 dark:hover:text-orange-500">How We Work?</Link></li>
-              <li><Link to="/capital" className="text-gray-600 dark:text-gray-400 hover:text-orange-500 dark:hover:text-orange-500">Capital</Link></li>
-              <li><Link to="/security" className="text-gray-600 dark:text-gray-400 hover:text-orange-500 dark:hover:text-orange-500">Security</Link></li>
-            </ul>
-          </div>
-
           {/* Support Section */}
           <div>
             <h3 className="text-gray-800 dark:text-white font-semibold mb-4">Support</h3>
@@ -53,7 +48,7 @@ const Footer = () => {
         <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-600 dark:text-gray-400 text-sm">
-              © 2023 MAA PREMA FOUNDATION. All rights reserved
+              © {new Date().getFullYear()} MAA PREMA FOUNDATION. All rights reserved
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <div className="flex items-center space-x-4">
@@ -76,14 +71,7 @@ const Footer = () => {
                   </svg>
                 </a>
               </div>
-              <div className="flex space-x-4">
-                <Link to="/terms" className="text-gray-600 dark:text-gray-400 hover:text-orange-500 dark:hover:text-orange-500 text-sm">
-                  Terms & Agreements
-                </Link>
-                <Link to="/privacy" className="text-gray-600 dark:text-gray-400 hover:text-orange-500 dark:hover:text-orange-500 text-sm">
-                  Privacy Policy
-                </Link>
-              </div>
+             
             </div>
           </div>
         </div>
