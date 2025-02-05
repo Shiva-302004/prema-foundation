@@ -4,6 +4,8 @@ import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import HomePage from './Pages/HomePage';
 import EventsPage from './Pages/EventsPage';
+import AboutPage from './Pages/AboutPage';
+import ContactPage from './Pages/ContactPage';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
@@ -25,6 +27,8 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />}/>
             <Route path="/events" element={<EventsPage />} />
+            <Route path="/about-us" element={<AboutPage />} />
+            <Route path="/contact" element={<ContactPage />} />
           </Routes>
           <Footer />
         </div>

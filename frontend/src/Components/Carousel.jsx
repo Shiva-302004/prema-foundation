@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import imageOne from '../assets/images/one.jpg'
-import imageTwo from '../assets/images/two.jpg'
-import imageThree from '../assets/images/three.jpg'
-import imageFour from '../assets/images/four.jpg'
-import imageFive from '../assets/images/five.jpg'
+import imageOne from '../assets/images/one.webp'
+import imageTwo from '../assets/images/two.webp'
+import imageThree from '../assets/images/three.webp'
+import imageFour from '../assets/images/four.webp'
+import imageFive from '../assets/images/five.webp'
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

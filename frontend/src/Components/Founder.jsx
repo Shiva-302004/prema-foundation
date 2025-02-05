@@ -1,4 +1,4 @@
-import founderImage from '../assets/images/founder.jpg';
+import founderImage from '../assets/images/founder.webp';
 
 const Founder = () => {
     return (
