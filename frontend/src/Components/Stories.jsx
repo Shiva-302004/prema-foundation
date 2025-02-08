@@ -1,12 +1,12 @@
 import { useRef } from 'react';
-import impactImage from '../assets/images/contact.jpeg';
-import news1 from "../assets/news/news1.jpg"
-import news2 from "../assets/news/news2.jpg"
-import news3 from "../assets/news/news3.jpg"
-import news4 from "../assets/news/news4.jpg"
-import news5 from "../assets/news/news5.jpg"
-import news6 from "../assets/news/news6.jpg"
-import news7 from "../assets/news/news7.jpg"
+import impactImage from '../assets/images/contact.webp';
+import news1 from "../assets/news/news1.webp"
+import news2 from "../assets/news/news2.webp"
+import news3 from "../assets/news/news3.webp"
+import news4 from "../assets/news/news4.webp"
+import news5 from "../assets/news/news5.webp"
+import news6 from "../assets/news/news6.webp"
+import news7 from "../assets/news/news7.webp"
 
 
 const Stories = () => {

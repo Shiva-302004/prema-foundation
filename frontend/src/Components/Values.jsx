@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import valuesImage from '../assets/images/values.jpeg';
+import valuesImage from '../assets/images/values.webp';
 
 const Values = () => {
     const [openIndex, setOpenIndex] = useState(null);
