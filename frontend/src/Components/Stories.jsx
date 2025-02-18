@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import impactImage from '../assets/images/contact.jpeg';
 import news1 from "../assets/news/news1.jpg"
 import news2 from "../assets/news/news2.jpg"
@@ -133,6 +134,19 @@ const Stories = () => {
                             </div>
                         ))}
                     </div>
+                </div>
+
+                {/* Add this after the stories container div */}
+                <div className="flex justify-center mt-8" data-aos="fade-up" data-aos-delay="400">
+                    <Link 
+                        to="/news" 
+                        className="bg-[#1e3a8a] hover:bg-blue-800 text-white font-semibold py-3 px-8 rounded-full transition duration-300 flex items-center gap-2"
+                    >
+                        View All Stories
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </Link>
                 </div>
             </div>
         </section>

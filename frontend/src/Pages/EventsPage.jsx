@@ -12,14 +12,6 @@ const EventsPage = () => {
     upcoming: [
       {
         id: 1,
-        image: Jdwom,
-        title: "Felicitation Ceremony",
-        date: "30th Jan,2025",
-        venue: "J.D. Women's College, Patna",
-        department: "Maa Prema Foundation",
-      },
-      {
-        id: 2,
         image: Mihtila,
         title: "Workshop on Mithila Painting",
         date: "1st-28th Feb,2025",

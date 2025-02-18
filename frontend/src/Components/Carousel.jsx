@@ -4,6 +4,7 @@ import imageTwo from '../assets/images/two.jpg'
 import imageThree from '../assets/images/three.jpg'
 import imageFour from '../assets/images/four.jpg'
 import imageFive from '../assets/images/five.jpg'
+import imageSix from '../assets/images/six.jpeg'
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -13,7 +14,8 @@ const Carousel = () => {
     imageTwo,
     imageThree,
     imageFour,
-    imageFive
+    imageFive,
+    imageSix
   ];
 
   useEffect(() => {

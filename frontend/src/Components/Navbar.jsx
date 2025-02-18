@@ -86,6 +86,15 @@ const Navbar = () => {
             >
               Values
             </a>
+            <Link
+              to="/openings"
+              className="text-gray-600 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-500 relative"
+            >
+              Openings
+              <span className="absolute -top-2 -right-6 bg-red-500 text-white text-xs px-2 py-0.5 rounded-full animate-pulse">
+                New
+              </span>
+            </Link>
             <a
               href="#contact"
               onClick={(e) => handleScroll(e, 'contact')}
@@ -175,6 +184,12 @@ const Navbar = () => {
               >
                 Values
               </a>
+              <Link
+                to="/openings"
+                className="block px-3 py-2 rounded-md text-gray-600 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-500"
+              >
+                Openings
+              </Link>
               <a
                 href="#contact"
                 onClick={(e) => handleScroll(e, 'contact')}

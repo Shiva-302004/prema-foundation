@@ -161,60 +161,73 @@ const Events = () => {
 
           {/* Scrollable Container */}
 
-          
-            <div
-              ref={scrollRef}
-              className="flex overflow-x-auto gap-6 p-5 scroll-smooth hide-scrollbar"
-              style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-            >
-              {events.map((event, index) => (
-                <div
-                  key={event.id}
-                  className="flex-none w-[300px] md:w-[300px] bg-white rounded-lg overflow-hidden shadow-lg p-2"
-                  data-aos="fade-up"
-                  data-aos-delay={200 + index * 100}
-                >
-                  <img
-                    src={event.image}
-                    alt={event.title}
-                    className="w-full h-[200px]  rounded-xl"
-                  />
-                  <div className="p-4">
-                    <div className="text-sm text-orange-500  mb-1">
-                      {event.department}
+          <div
+            ref={scrollRef}
+            className="flex overflow-x-auto gap-6 p-5 scroll-smooth hide-scrollbar"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          >
+            {events.map((event, index) => (
+              <div
+                key={event.id}
+                className="flex-none w-[300px] md:w-[300px] bg-white rounded-lg overflow-hidden shadow-lg p-2"
+                data-aos="fade-up"
+                data-aos-delay={200 + index * 100}
+              >
+                <img
+                  src={event.image}
+                  alt={event.title}
+                  className="w-full h-[200px]  rounded-xl"
+                />
+                <div className="p-4">
+                  <div className="text-sm text-orange-500  mb-1">
+                    {event.department}
+                  </div>
+                  <h3 className="text-base font-bold text-[#1e3a8a] mb-1">
+                    {event.title}
+                  </h3>
+                  <div className="flex justify-between text-gray-600  text-sm">
+                    <div className="text-left">
+                      <span className="font-semibold">Date: </span>
+                      {event.date}
                     </div>
-                    <h3 className="text-base font-bold text-[#1e3a8a] mb-1">
-                      {event.title}
-                    </h3>
-                    <div className="flex justify-between text-gray-600  text-sm">
-                      <div className="text-left">
-                        <span className="font-semibold">Date: </span>
-                        {event.date}
-                      </div>
-                      <div className="text-right ">
-                        <span className="font-semibold">Venue: </span>
-                        {event.venue}
-                      </div>
+                    <div className="text-right ">
+                      <span className="font-semibold">Venue: </span>
+                      {event.venue}
                     </div>
                   </div>
                 </div>
-              ))}
-            </div>
-            
-       
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* View All Button */}
-        <div className="flex justify-end">
-              <div className="mx-2 my-4">
-                <Link
-                  to="/events"
-                  className="bg-[#1e3a8a]  text-white px-6 py-2 rounded-lg hover:bg-[#2c54d8] transition-colors"
-                >
-                  View All
-                </Link>
-              </div>
-            </div>
+        <div
+          className="flex justify-center mt-8"
+          data-aos="fade-up"
+          data-aos-delay="400"
+        >
+          <Link
+            to="/events"
+            className="bg-[#1e3a8a] hover:bg-blue-800 text-white font-semibold py-3 px-8 rounded-full transition duration-300 flex items-center gap-2"
+          >
+            View All Events
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+              className="w-4 h-4"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M8.25 4.5l7.5 7.5-7.5 7.5"
+              />
+            </svg>
+          </Link>
+        </div>
       </div>
     </section>
   );

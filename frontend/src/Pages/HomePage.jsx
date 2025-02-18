@@ -8,6 +8,7 @@ import Founder from '../Components/Founder';
 import Contact from '../Components/Contact';
 import Donation from '../Components/Donation';
 import Events from '../Components/Events';
+import Gallery from '../Components/Gallery';
 
 const HomePage = () => {
   return (
@@ -31,6 +32,9 @@ const HomePage = () => {
          </section>
          <section id="stories">
            <Stories />
+         </section>
+         <section id="gallery">
+           <Gallery />
          </section>
          <section id="founder">
            <Founder />

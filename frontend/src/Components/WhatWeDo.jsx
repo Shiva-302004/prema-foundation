@@ -1,6 +1,11 @@
 import { FaBook, FaHeartbeat, FaFistRaised, FaFileAlt, FaParachuteBox, FaHandsHelping } from 'react-icons/fa';
 
 const WhatWeDo = () => {
+    // Import all mission and thematic images
+    const allImages = Object.values(
+        import.meta.glob('/src/assets/mission/*.{png,jpg,jpeg,svg,JPG}', { eager: true })
+    ).map(module => module.default);
+
     const mission = [
         {
             title: "Primary Education",
@@ -110,19 +115,29 @@ const WhatWeDo = () => {
                         {mission.map((item, index) => (
                             <div 
                                 key={index} 
-                                className={`${item.bgColor} p-6 rounded-xl transition-transform duration-300 hover:scale-105 ${item.bgColorHover}`}
+                                className="relative rounded-xl overflow-hidden h-[300px] group"
                                 data-aos="fade-up"
                                 data-aos-delay={300 + (index * 100)}
                             >
-                                <div className="mb-4">
-                                    {item.icon}
+                                <div 
+                                    className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                                    style={{ 
+                                        backgroundImage: `url(${allImages[index] || ''})`,
+                                    }}
+                                />
+                                <div className="absolute inset-0 bg-black/50 group-hover:bg-black/40 transition-colors duration-300" />
+                                
+                                <div className="relative z-10 p-6 h-full flex flex-col justify-end">
+                                    <div className="text-white mb-4">
+                                        {item.icon}
+                                    </div>
+                                    <h3 className="text-white text-xl font-bold mb-2">
+                                        {item.title}
+                                    </h3>
+                                    <p className="text-white/90">
+                                        {item.description}
+                                    </p>
                                 </div>
-                                <h3 className={`${item.color} text-xl font-bold mb-2`}>
-                                    {item.title}
-                                </h3>
-                                <p className="text-gray-600">
-                                    {item.description}
-                                </p>
                             </div>
                         ))}
                     </div>
@@ -135,19 +150,29 @@ const WhatWeDo = () => {
                         {thematicAreas.map((area, index) => (
                             <div 
                                 key={index} 
-                                className={`${area.bgColor} p-6 rounded-xl transition-transform duration-300 hover:scale-105 ${area.bgColorHover}`}
+                                className="relative rounded-xl overflow-hidden h-[300px] group"
                                 data-aos="fade-up"
                                 data-aos-delay={300 + (index * 100)}
                             >
-                                <div className="mb-4">
-                                    {area.icon}
+                                <div 
+                                    className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                                    style={{ 
+                                        backgroundImage: `url(${allImages[index + mission.length] || ''})`,
+                                    }}
+                                />
+                                <div className="absolute inset-0 bg-black/50 group-hover:bg-black/40 transition-colors duration-300" />
+                                
+                                <div className="relative z-10 p-6 h-full flex flex-col justify-end">
+                                    <div className="text-white mb-4">
+                                        {area.icon}
+                                    </div>
+                                    <h3 className="text-white text-xl font-bold mb-2">
+                                        {area.title}
+                                    </h3>
+                                    <p className="text-white/90">
+                                        {area.description}
+                                    </p>
                                 </div>
-                                <h3 className={`${area.color} text-xl font-bold mb-2`}>
-                                    {area.title}
-                                </h3>
-                                <p className="text-gray-600">
-                                    {area.description}
-                                </p>
                             </div>
                         ))}
                     </div>
