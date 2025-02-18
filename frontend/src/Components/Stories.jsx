@@ -7,7 +7,7 @@ import news4 from "../assets/news/news4.webp"
 import news5 from "../assets/news/news5.webp"
 import news6 from "../assets/news/news6.webp"
 import news7 from "../assets/news/news7.webp"
-
+import { Link } from 'react-router-dom';
 
 const Stories = () => {
     const scrollRef = useRef(null);
