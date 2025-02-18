@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 import imageSix from '../assets/images/six.jpeg'
-import imageOne from '../assets/images/one.webp'
+import imageOne from '../assets/images/one.jpg'
 import imageTwo from '../assets/images/two.webp'
 import imageThree from '../assets/images/three.webp'
 import imageFour from '../assets/images/four.webp'
