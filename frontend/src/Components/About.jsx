@@ -1,4 +1,4 @@
-import classImage from '../assets/images/class.jpeg';
+import classImage from '../assets/images/class.webp';
 
 const AboutSection = () => {
 

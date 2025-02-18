@@ -1,4 +1,4 @@
-import contactImage2 from '../assets/images/contact.jpeg';
+import contactImage2 from '../assets/images/contact.webp';
 
 const Contact = () => {
     return (

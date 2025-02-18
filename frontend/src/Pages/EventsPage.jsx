@@ -1,12 +1,12 @@
-import Mihtila from "../assets/images/mithila.png";
-import Jdwom from "../assets/images/jdwomens.jpeg";
-import closing from "../assets/events/closingCeremony.jpg";
-import selfDefence from "../assets/events/selfDefence.jpg";
-import eveTeasing from "../assets/events/eveteasing.jpg";
-import plant from "../assets/events/plant.jpeg";
-import rally from "../assets/events/rally.jpeg";
-import handmade from "../assets/events/handmade.jpg";
-import flag from "../assets/events/flag.jpeg";
+import Mihtila from "../assets/images/mithila.webp";
+import Jdwom from "../assets/images/jdwomens.webp";
+import closing from "../assets/events/closingCeremony.webp";
+import selfDefence from "../assets/events/selfDefence.webp";
+import eveTeasing from "../assets/events/eveteasing.webp";
+import plant from "../assets/events/plant.webp";
+import rally from "../assets/events/rally.webp";
+import handmade from "../assets/events/handmade.webp";
+import flag from "../assets/events/flag.webp";
 const EventsPage = () => {
   const events = {
     upcoming: [
