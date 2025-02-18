@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+
+import imageSix from '../assets/images/six.jpeg'
 import imageOne from '../assets/images/one.webp'
 import imageTwo from '../assets/images/two.webp'
 import imageThree from '../assets/images/three.webp'
@@ -13,7 +15,8 @@ const Carousel = () => {
     imageTwo,
     imageThree,
     imageFour,
-    imageFive
+    imageFive,
+    imageSix
   ];
 
   useEffect(() => {

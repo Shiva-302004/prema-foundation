@@ -43,20 +43,16 @@ const DonationModal = ({ isOpen, onClose }) => {
                             <span className="font-bold">Maa Prema Foundation</span>
                         </div>
                         <div className="flex justify-between items-center p-4 bg-gray-200 rounded-lg">
-                            <span className="font-semibold text-orange-500">Bank Name</span>
-                            <span className="font-bold">State Bank of India</span>
-                        </div>
-                        <div className="flex justify-between items-center p-4 bg-gray-200 rounded-lg">
                             <span className="font-semibold text-orange-500">Account Number</span>
-                            <span className="font-bold">39819703195</span>
+                            <span className="font-bold">8805002100000398</span>
                         </div>
                         <div className="flex justify-between items-center p-4 bg-gray-200 rounded-lg">
                             <span className="font-semibold text-orange-500">IFSC Code</span>
-                            <span className="font-bold">SBIN0001474</span>
+                            <span className="font-bold">PUNB0880500</span>
                         </div>
                         <div className="flex justify-between items-center p-4 bg-gray-200 rounded-lg">
-                            <span className="font-semibold text-orange-500  ">Branch</span>
-                            <span className="font-bold">PATNA MAIN BRANCH</span>
+                            <span className="font-semibold text-orange-500 ">Branch</span>
+                            <span className="font-bold">MITHAPUR, PATNA (BIHAR)</span>
                         </div>
                     </div>
                 </div>
