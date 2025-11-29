@@ -33,9 +33,9 @@ const HomePage = () => {
          <section id="stories">
            <Stories />
          </section>
-         {/* <section id="gallery">
+         <section id="gallery">
            <Gallery />
-         </section> */}
+         </section>
          <section id="founder">
            <Founder />
          </section>
