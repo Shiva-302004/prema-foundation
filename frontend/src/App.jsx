@@ -8,6 +8,7 @@ import OpeningsPage from './Pages/OpeningsPage';
 import NewsPage from './Pages/NewsPage';
 import GalleryPage from './Pages/GalleryPage';
 import AboutPage from './Pages/AboutPage';
+import CoalIndiaPage from './Pages/CoalIndiaPage';
 import ContactPage from './Pages/ContactPage';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -34,6 +35,7 @@ function App() {
             <Route path="/news" element={<NewsPage />} />
             <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/about-us" element={<AboutPage />} />
+            <Route path="/coal-proj" element={<CoalIndiaPage />} />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
           <Footer />

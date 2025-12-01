@@ -4,7 +4,7 @@ const GalleryPage = () => {
   // Import all gallery images
   const galleryImages = Object.values(
     import.meta.glob('/src/assets/gallery/*.{png,jpg,jpeg,svg}', { eager: true })
-  ).map(module => module.default);
+    ).map(module => module.default);
 
   return (
     <motion.div

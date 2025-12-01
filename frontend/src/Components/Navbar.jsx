@@ -95,6 +95,20 @@ const Navbar = () => {
                 New
               </span>
             </Link>
+
+            <Link
+              to="/coal-proj"
+              className="text-gray-600 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-500 relative"
+            >
+              Coal India Project
+              <span className="absolute -top-2 -right-6 bg-red-500 text-white text-xs px-2 py-0.5 rounded-full animate-pulse">
+                New
+              </span>
+            </Link>
+
+            
+
+
             <a
               href="#contact"
               onClick={(e) => handleScroll(e, 'contact')}
@@ -190,6 +204,15 @@ const Navbar = () => {
               >
                 Openings
               </Link>
+
+              <a
+              href="#coalIndia"
+              onClick={(e) => handleScroll(e, 'coalIndia')}
+              className="text-gray-600 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-500"
+            >
+              Coal India Projects
+            </a>
+
               <a
                 href="#contact"
                 onClick={(e) => handleScroll(e, 'contact')}
