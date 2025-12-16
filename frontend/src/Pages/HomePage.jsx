@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Carousel from "../Components/Carousel";
 import AboutSection from "../Components/About";
 import Impact from '../Components/Impact';
@@ -11,6 +13,22 @@ import Events from '../Components/Events';
 import Gallery from '../Components/Gallery';
 
 const HomePage = () => {
+  // ********** To link from any pages ***********
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace("#", "");
+      const element = document.getElementById(id);
+
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    }
+  }, [location]);
+//***************************** */
   return (
     <div>
         
