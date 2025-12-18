@@ -165,61 +165,118 @@ const Navbar = () => {
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white dark:bg-gray-900">
               <Link
                 to="/"
-                onClick={(e) => handleScroll(e, 'home')}
+                // onClick={(e) => handleScroll(e, 'home')}
+                onClick={() => setIsMenuOpen(false)}
                 className="block px-3 py-2 rounded-md text-gray-600 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-500"
               >
                 Home
               </Link>
-              <a
-                href="#about"
-                onClick={(e) => handleScroll(e, 'about')}
+
+              <Link
+                to="/about-us"
+                // onClick={(e) => handleScroll(e, 'home')}
+                onClick={() => setIsMenuOpen(false)}
                 className="block px-3 py-2 rounded-md text-gray-600 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-500"
               >
                 About
-              </a>
-              <a
-                href="#impact"
+              </Link>
+              {/* <a
+                href="#about"
+                onClick={(e) => {
+                  handleScroll(e, "about");
+                  setIsMenuOpen(false);
+                }}
+                className="block px-3 py-2 rounded-md text-gray-600 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-500"
+              >
+                About
+              </a> */}
+              {/* <a
+                href="/#impact"
                 onClick={(e) => handleScroll(e, 'impact')}
                 className="block px-3 py-2 rounded-md text-gray-600 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-500"
               >
                 Impact
-              </a>
-              <a
-                href="#whatwedo"
-                onClick={(e) => handleScroll(e, 'whatwedo')}
+              </a> */}
+
+              <Link
+                to="/#impact"
+                // onClick={(e) => handleScroll(e, 'home')}
+                onClick={() => setIsMenuOpen(false)}
+                className="block px-3 py-2 rounded-md text-gray-600 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-500"
+              >
+                Impact
+              </Link>
+              {/* <a
+                href="/#whatwedo"
+                onClick={(e) => {
+                 handleScroll(e, "whatwedo");
+                 setIsMenuOpen(false);
+                 }}
                 className="block px-3 py-2 rounded-md text-gray-600 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-500"
               >
                 What We Do
-              </a>
-              <a
+              </a> */}
+              <Link
+                to="/#whatwedo"
+                // onClick={(e) => handleScroll(e, 'home')}
+                onClick={() => setIsMenuOpen(false)}
+                className="block px-3 py-2 rounded-md text-gray-600 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-500"
+              >
+                What We Do
+              </Link>
+              {/* <a
                 href="#values"
-                onClick={(e) => handleScroll(e, 'values')}
+                onClick={(e) => {
+                handleScroll(e, "values");
+                setIsMenuOpen(false);
+                }}
                 className="block px-3 py-2 rounded-md text-gray-600 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-500"
               >
                 Values
-              </a>
+              </a> */}
+              <Link
+                to="/#values"
+                // onClick={(e) => handleScroll(e, 'home')}
+                onClick={() => setIsMenuOpen(false)}
+                className="block px-3 py-2 rounded-md text-gray-600 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-500"
+              >
+                Values
+              </Link>
               <Link
                 to="/openings"
+                onClick={() => setIsMenuOpen(false)}
                 className="block px-3 py-2 rounded-md text-gray-600 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-500"
               >
                 Openings
               </Link>
 
               <a
-              href="#coalIndia"
-              onClick={(e) => handleScroll(e, 'coalIndia')}
-              className="text-gray-600 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-500"
-            >
+                href="/coal-proj"
+                onClick={() => setIsMenuOpen(false)}
+                className="block px-3 py-2 rounded-md text-gray-600 dark:text-gray-200 hover:text-orange-500"
+              >
               Coal India Projects
-            </a>
+              </a>
 
-              <a
-                href="#contact"
-                onClick={(e) => handleScroll(e, 'contact')}
+              <Link
+                to="/#contact"
+                // onClick={(e) => handleScroll(e, 'home')}
+                onClick={() => setIsMenuOpen(false)}
                 className="block px-3 py-2 rounded-md text-gray-600 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-500"
               >
                 Contact
-              </a>
+              </Link>
+
+              {/* <a
+                href="#contact"
+                onClick={(e) => {
+          handleScroll(e, "contact");
+          setIsMenuOpen(false);
+        }}
+                className="block px-3 py-2 rounded-md text-gray-600 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-500"
+              >
+                Contact
+              </a> */}
             </div>
           </div>
         )}
