@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 
+import bannerImage from '../assets/images/banner.jpg'
 import imageSix from '../assets/images/six.jpeg'
 import imageOne from '../assets/images/one.jpg'
 import imageTwo from '../assets/images/two.webp'
@@ -11,6 +12,7 @@ const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const images = [
+    bannerImage,
     imageOne,
     imageTwo,
     imageThree,
@@ -53,12 +55,16 @@ const Carousel = () => {
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {images.map((image, index) => (
-          <img
-            key={index}
-            src={image}
-            alt={`Slide ${index + 1}`}
-            className="w-full h-full object-cover flex-shrink-0 brightness-50"
-          />
+          <div key={index} className="relative w-full h-full flex-shrink-0">
+            <img
+              src={image}
+              alt={`Slide ${index + 1}`}
+              className="w-full h-full object-cover brightness-50"
+            />
+            {index === 0 && (
+              <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/65 md:bg-gradient-to-r md:from-black/20 md:via-black/45 md:to-black/75 pointer-events-none" />
+            )}
+          </div>
         ))}
       </div>
 
