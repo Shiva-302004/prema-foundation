@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import logo from "../assets/images/logo.jpg";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -40,13 +41,12 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link
-            to="/"
-            className="flex items-center text-orange-500 text-xl font-bold"
-          >
-            MPF <span className="text-orange-500 px-1"> {" "}<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24">
-                    <path d="M12.74 2.32a1 1 0 0 0-1.48 0l-9 10A1 1 0 0 0 3 14h2v7a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-7h2a1 1 0 0 0 1-1 1 1 0 0 0-.26-.68z" fill="#FF6900"></path>
-                </svg></span>
+          <Link to="/" className="flex items-center">
+            <img
+              src={logo}
+              alt="Maa Prema Foundation Logo"
+              className="h-14 w-auto object-contain rounded-md bg-white p-0.5"
+            />
           </Link>
 
           {/* Desktop Menu */}
